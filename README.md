@@ -55,3 +55,6 @@ Inside layer3.zip are 3 files: 1.zip, 2.jpg, 4.jpg. This layer has two diversion
 * 4.jpg is an image of a man recursively staring at himself in his own reflection. The hint is supposed to make the hunter think of recursion as a key principle in this puzzle. Viewing the file in a hex editor will reveal that past the JPG EOI is a string of ascii characters. This is actually a string of bytes that must be interpreted as hex to reveal another hex string which finally reveals another file. This file's magic numbers actually show it to be a 7zip archive. Inside it is a file called sequence_keys.txt
 
 Attempting to extract this final 7zip will prompt for a password. Provided the hunter has decoded the string from 1.zip they can successfully extract the final message, congratulating the hunter, giving them their gift codes (which have been redacted for this repo), and also revealing that if they change a different byte in the initial executable and re-run - it will dump the source code for this project.
+
+# Disclaimer
+No AI was used in the creation of this project
