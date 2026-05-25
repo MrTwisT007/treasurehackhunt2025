@@ -11,7 +11,7 @@ The final solution revealed some gift codes (redacted) as well as the entire sou
 The original hunt executable was provided with an audio recording (not included, but script can be found in the design doc) containing some silly plot about conspiracies and a DTMF encoded byte string at the end. The puzzle/executable itself is in three layers, with each building on top of the previous ones' principles. As the hunter progresses through the hunt more of the lore is revealed about wormholes and portals. This is loosely referencing the game distribution platform Steam, for which the solution provided gift codes.
 
 # How do I build it?
-<font color="red">WARNING! This project creates an executable with embedded obfuscated binary data. This can trigger anti-malware and security software</font>
+<font color="red">**WARNING**! This project creates an executable with embedded obfuscated binary data. This can trigger anti-malware and security software</font>
 
 The project requires GCC, binutils and 7zip to build. Running `make` will build both a linux (`m.x`) and windows (`layer1.exe`) version, but the windows build might fail if the host does not have `x86_64-w64-mingw32-gcc`. The `build` directory will contain all the intermediary build files that are created and packed into the layers during the compilation process. It was done this way since the puzzle is assembled "backwards" from the end. Running `make clean` will purge the contents of the build directory and will delete the de/obfuscator and hunt executables.
 
@@ -27,7 +27,7 @@ The obfuscator/deobfuscator pair can be built by running `make obfus.x`
 # De/Obfuscator usage
 The de/obfuscator takes a file and depending on input arguments will create an obfuscated or deobfuscated output. It actually has more functionality than was used in the hunt itself and can be used standalone.
 
-<font color="red">WARNING! Obfuscated files created by the obfucator may be interpreted as malicious files by security software! Do not run the obfuscator on any machine with any enterprise security software</font>
+<font color="red">**WARNING**! Obfuscated files created by the obfucator may be interpreted as malicious files by security software! Do not run the obfuscator on any machine with any enterprise security software</font>
 
 The usage is:
 `obfus.x INPUT_FILENAME OUTPUT_FILENAME PADDING SCHEME EXTRA`:
